@@ -16,15 +16,15 @@
 
 2. **Initialize Developer Progress Report System**
 
-   - Navigate to `docs/` folder
+   - Navigate to `developer-progress-reporting-system/` folder
    - Ensure `BLUEPRINT.md` and `PROGRESS.md` exist
    - If they don't exist, create them with initial structure
-   - Start the dev progress report web viewer: `cd docs && npm run dev`
+   - Start the dev progress report web viewer: `cd developer-progress-reporting-system && npm run dev`
 
 3. **Read Current Project State**
 
-   - ALWAYS read `docs/BLUEPRINT.md` first to understand project architecture
-   - ALWAYS read `docs/PROGRESS.md` to understand current status
+   - ALWAYS read `developer-progress-reporting-system/BLUEPRINT.md` first to understand project architecture
+   - ALWAYS read `developer-progress-reporting-system/PROGRESS.md` to understand current status
    - These files are the SINGLE SOURCE OF TRUTH
 
 4. **Begin Development**
