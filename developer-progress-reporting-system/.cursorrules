@@ -1,0 +1,452 @@
+# Developer Progress Report System - Cursor IDE Integration Rules
+
+## 🎯 MANDATORY: Initial Project Setup
+
+### Step 1: Developer Progress Report System (REQUIRED FIRST STEP)
+
+**FOR EVERY NEW PROJECT, THIS IS THE FIRST STEP:**
+
+1. **Clone/Pull from GitHub Repository** (if exists)
+
+   ```bash
+   git clone <repository-url>
+   # OR if repository exists
+   git pull origin main
+   ```
+
+2. **Initialize Developer Progress Report System**
+
+   - Navigate to `docs/` folder
+   - Ensure `BLUEPRINT.md` and `PROGRESS.md` exist
+   - If they don't exist, create them with initial structure
+   - Start the dev progress report web viewer: `cd docs && npm run dev`
+
+3. **Read Current Project State**
+
+   - ALWAYS read `docs/BLUEPRINT.md` first to understand project architecture
+   - ALWAYS read `docs/PROGRESS.md` to understand current status
+   - These files are the SINGLE SOURCE OF TRUTH
+
+4. **Begin Development**
+   - Use the Developer Progress Report System's AI chat to discuss ideas
+   - Update `docs/BLUEPRINT.md` when planning features
+   - Update `docs/PROGRESS.md` when making progress
+
+**RULE: Never start coding without first reading BLUEPRINT.md and PROGRESS.md**
+
+---
+
+## 🔗 INTEGRATION BRIDGE: Cursor IDE ↔ Developer Progress Report System
+
+### The Connection Point: `.cursorrules` File
+
+This `.cursorrules` file is the **BRIDGE** between:
+
+- **Developer Progress Report System** (docs/BLUEPRINT.md, docs/PROGRESS.md)
+- **Cursor IDE** (Code assistant, chat, autocomplete)
+
+### How the Bridge Works:
+
+1. **Cursor IDE reads** → `docs/BLUEPRINT.md` and `docs/PROGRESS.md`
+2. **User makes changes** → Cursor IDE updates markdown files automatically
+3. **Developer Progress Report System** → Displays updated documentation
+4. **AI Chat in Dev Progress System** → Uses same documentation for context
+5. **Seamless Communication** → Both systems stay in sync
+
+---
+
+## 📋 MANDATORY: Documentation Workflow Rules
+
+### Main Documentation Files (ONLY 2 FILES)
+
+**NEVER create additional documentation files unless explicitly requested by the user.**
+
+The project maintains ONLY these 2 main documentation files in the `docs/` folder:
+
+1. **`docs/BLUEPRINT.md`** - SINGLE SOURCE OF TRUTH for all planning, architecture, design decisions, and technical specifications
+
+   - All planning goes here
+   - All architecture decisions go here
+   - All technical insights go here
+   - All design decisions go here
+   - Update this file, never create new planning files
+
+2. **`docs/PROGRESS.md`** - SINGLE SOURCE OF TRUTH for all progress updates, completed features, and current status
+   - All progress updates go here
+   - All completed features go here
+   - All milestones go here
+   - Update this file, never create new progress files
+
+**Note**: Documentation files are located in `docs/` folder with a web viewer at `docs/index.html` for monitoring progress.
+
+### Temporary Documentation Files
+
+**Use `temp_docs/` folder for temporary research, investigation, or analysis files:**
+
+- Create temporary files in `temp_docs/` when needed for research
+- After extracting insights, integrate them into BLUEPRINT.md or PROGRESS.md
+- **DELETE temp files after integration** - do not leave them in the folder
+- Temp docs are for investigation only, not permanent documentation
+
+---
+
+## 🔄 AUTOMATIC UPDATE RULES
+
+### CRITICAL: Automatic Documentation Updates
+
+**When you make ANY code changes, you MUST automatically update the documentation files. This is MANDATORY and should happen IMMEDIATELY, not "later".**
+
+### When Making Code Changes:
+
+**ALWAYS update documentation files when:**
+
+1. **Adding New Features**
+
+   - **IMMEDIATELY** after creating a new file/component:
+     - Update `docs/BLUEPRINT.md` → Add feature specification under appropriate section
+     - Update `docs/PROGRESS.md` → Add feature to "🚧 In Progress" section with status "🟡 In Progress"
+   - **DO THIS BEFORE** moving to the next task
+
+2. **Completing Features**
+
+   - **IMMEDIATELY** after feature is working:
+     - Update `docs/PROGRESS.md` → Move feature from "In Progress" to "✅ Completed Features"
+     - Update completion percentage in progress summary table
+     - Add completion date
+   - **DO THIS** as soon as the feature works, not at the end of the day
+
+3. **Making Architecture Decisions**
+
+   - **IMMEDIATELY** when making design/architecture choices:
+     - Update `docs/BLUEPRINT.md` → Document decision in "Architecture" or "Technical Design" section
+     - Explain reasoning and alternatives considered
+     - Update date stamp
+   - **DO THIS** right after making the decision
+
+4. **Fixing Bugs**
+
+   - **IMMEDIATELY** after fixing:
+     - Update `docs/PROGRESS.md` → Add to "🐛 Bug Fixes" section
+     - Document the issue and solution
+     - Add date
+   - **DO THIS** right after the fix is verified
+
+5. **Refactoring Code**
+   - **IMMEDIATELY** after refactoring:
+     - Update `docs/BLUEPRINT.md` → Document refactoring in "Technical Design" section
+     - Update `docs/PROGRESS.md` → Note refactoring in progress updates
+     - Explain what changed and why
+   - **DO THIS** right after refactoring is complete
+
+### Automatic Update Process (MANDATORY):
+
+**For EVERY code change, follow this process:**
+
+1. **Make the code change**
+2. **IMMEDIATELY read** `docs/BLUEPRINT.md` and `docs/PROGRESS.md` (if you haven't already)
+3. **Determine** which sections need updating based on the change
+4. **Update** the appropriate markdown files with the new information
+5. **Save** the files
+6. **Commit** documentation changes with code changes (same commit)
+
+**DO NOT:**
+
+- ❌ Skip documentation updates
+- ❌ Update documentation "later" or "at the end"
+- ❌ Forget to update after completing work
+- ❌ Make changes without reading existing documentation first
+- ❌ Commit code without updating documentation
+
+### Update Format:
+
+**For BLUEPRINT.md:**
+
+```markdown
+## [Section Name]
+
+### [Feature/Decision Name]
+
+- **Date**: YYYY-MM-DD
+- **Status**: Planning/In Progress/Complete
+- **Description**: [Clear description]
+- **Technical Details**: [Implementation details]
+- **Dependencies**: [Any dependencies]
+```
+
+**For PROGRESS.md:**
+
+```markdown
+## ✅ Completed Features
+
+### [Feature Name]
+
+- **Date Completed**: YYYY-MM-DD
+- **Status**: ✅ Complete
+- **Details**: [What was implemented]
+```
+
+---
+
+## 🤖 CURSOR CHAT INTEGRATION
+
+### When User Says "Follow the Blueprint" or "Update Progress":
+
+**ALWAYS:**
+
+1. **Read Current State**
+
+   - Read `docs/BLUEPRINT.md` to understand planned features
+   - Read `docs/PROGRESS.md` to understand current status
+   - Understand the project architecture and goals
+
+2. **Follow Instructions**
+
+   - Implement features as specified in BLUEPRINT.md
+   - Follow architecture decisions documented in BLUEPRINT.md
+   - Respect technical constraints and design decisions
+
+3. **Update Documentation**
+
+   - After implementing, update PROGRESS.md with completion status
+   - If making design decisions, update BLUEPRINT.md
+   - Keep documentation in sync with code
+
+4. **Maintain Consistency**
+   - Ensure code matches documentation
+   - Ensure documentation reflects actual implementation
+   - Keep both systems aligned
+
+### Example Workflow:
+
+**User**: "Follow the blueprint and implement the authentication feature"
+
+**Cursor AI Should:**
+
+1. **FIRST**: Read `docs/BLUEPRINT.md` completely → Find authentication feature specification
+2. **SECOND**: Read `docs/PROGRESS.md` → Check current status and what's already done
+3. **THIRD**: Understand the architecture and design decisions from BLUEPRINT.md
+4. **FOURTH**: Implement feature **exactly** as specified in BLUEPRINT.md
+5. **FIFTH**: **IMMEDIATELY** update `docs/PROGRESS.md` → Mark authentication as "🟡 In Progress" while implementing
+6. **SIXTH**: After feature works, **IMMEDIATELY** update `docs/PROGRESS.md` → Move to "✅ Completed Features"
+7. **SEVENTH**: Update completion percentage in PROGRESS.md
+8. **EIGHTH**: Ensure implementation matches documentation (if not, update BLUEPRINT.md to reflect reality)
+
+### Specific Commands:
+
+**When user says:**
+
+- "Follow the blueprint" → Read BLUEPRINT.md, implement as specified, update PROGRESS.md during and after
+- "Update progress" → Read current PROGRESS.md, update with latest status immediately
+- "Implement [feature]" → Check BLUEPRINT.md for feature spec, implement, update PROGRESS.md during and after
+- "Complete [feature]" → Mark feature as complete in PROGRESS.md immediately, update completion percentage
+- "Add feature [name]" → Add to BLUEPRINT.md first, then implement, then update PROGRESS.md during and after
+
+---
+
+## 📁 GITHUB INTEGRATION
+
+### Repository Structure:
+
+```
+project-root/
+├── .cursorrules          # This file (MUST be in root)
+├── docs/
+│   ├── BLUEPRINT.md      # Project blueprint (MUST exist)
+│   ├── PROGRESS.md       # Progress tracking (MUST exist)
+│   ├── index.html        # Web viewer
+│   └── ...
+├── src/                  # Source code
+└── ...
+```
+
+### When Pulling from GitHub:
+
+1. **Check for .cursorrules**
+
+   - If `.cursorrules` exists, read it first
+   - Follow the rules defined in it
+
+2. **Check for docs/ folder**
+
+   - If `docs/BLUEPRINT.md` exists, read it
+   - If `docs/PROGRESS.md` exists, read it
+   - Understand project state before making changes
+
+3. **Sync Documentation**
+   - Ensure local documentation matches repository
+   - Update documentation if code has changed
+   - Commit documentation updates with code changes
+
+---
+
+## 🎯 PROJECT INITIALIZATION WORKFLOW
+
+### For New Projects:
+
+1. **Create Repository Structure**
+
+   ```bash
+   mkdir project-name
+   cd project-name
+   git init
+   ```
+
+2. **Initialize Developer Progress Report System**
+
+   ```bash
+   mkdir docs
+   # Create BLUEPRINT.md with initial structure
+   # Create PROGRESS.md with initial structure
+   # Copy dev progress report system files
+   ```
+
+3. **Add .cursorrules**
+
+   - Copy this `.cursorrules` file to project root
+   - Ensure it's committed to repository
+
+4. **Start Development**
+   - Use Developer Progress Report System to plan
+   - Update BLUEPRINT.md with architecture
+   - Update PROGRESS.md as you progress
+
+### For Existing Projects:
+
+1. **Pull from GitHub**
+
+   ```bash
+   git pull origin main
+   ```
+
+2. **Read Documentation**
+
+   - Read `docs/BLUEPRINT.md`
+   - Read `docs/PROGRESS.md`
+   - Understand current state
+
+3. **Continue Development**
+   - Follow existing architecture
+   - Update documentation as you work
+   - Keep documentation in sync
+
+---
+
+## 🔍 READING DOCUMENTATION RULES
+
+### Before Making ANY Changes:
+
+**ALWAYS read:**
+
+1. `docs/BLUEPRINT.md` → Understand architecture and plans
+2. `docs/PROGRESS.md` → Understand current status
+3. `.cursorrules` → Understand project rules
+
+### Reading Priority:
+
+1. **First**: Read `.cursorrules` (this file)
+2. **Second**: Read `docs/BLUEPRINT.md` (project architecture)
+3. **Third**: Read `docs/PROGRESS.md` (current status)
+4. **Then**: Make changes following the documentation
+
+---
+
+## 📝 DOCUMENTATION UPDATE TRIGGERS
+
+### Automatic Update Triggers:
+
+**Update `docs/BLUEPRINT.md` when:**
+
+- Adding new features
+- Making architecture decisions
+- Changing technical design
+- Planning new functionality
+- Documenting design patterns
+
+**Update `docs/PROGRESS.md` when:**
+
+- Completing features
+- Making progress on tasks
+- Fixing bugs
+- Reaching milestones
+- Changing project status
+
+### Update Frequency:
+
+- **Real-time**: Update immediately after making changes
+- **Before commits**: Ensure documentation is updated
+- **After features**: Always update after completing features
+- **Weekly review**: Review and update documentation weekly
+
+---
+
+## 🚫 WHAT NOT TO DO
+
+### ❌ Never:
+
+- Create additional documentation files (use BLUEPRINT.md and PROGRESS.md only)
+- Ignore existing documentation
+- Make changes without reading BLUEPRINT.md first
+- Skip updating PROGRESS.md after completing work
+- Create duplicate documentation
+- Leave documentation out of sync with code
+
+### ✅ Always:
+
+- Read BLUEPRINT.md before making changes
+- Update PROGRESS.md after completing work
+- Keep documentation in sync with code
+- Follow architecture decisions in BLUEPRINT.md
+- Use Developer Progress Report System for planning
+- Commit documentation updates with code changes
+
+---
+
+## 🔗 SEAMLESS INTEGRATION CHECKLIST
+
+### For Every Development Session:
+
+- [ ] Read `docs/BLUEPRINT.md` to understand project
+- [ ] Read `docs/PROGRESS.md` to understand status
+- [ ] Use Developer Progress Report System for planning
+- [ ] Make code changes following BLUEPRINT.md
+- [ ] Update `docs/PROGRESS.md` after completing work
+- [ ] Update `docs/BLUEPRINT.md` if making design decisions
+- [ ] Ensure documentation matches code
+- [ ] Commit documentation with code changes
+
+---
+
+## 🎯 ENFORCEMENT
+
+**These rules are MANDATORY. Always:**
+
+1. **Start with Documentation**: Read BLUEPRINT.md and PROGRESS.md first
+2. **Follow the Blueprint**: Implement features as specified
+3. **Update Progress**: Keep PROGRESS.md current
+4. **Maintain Sync**: Keep documentation and code aligned
+5. **Use the System**: Leverage Developer Progress Report System for planning
+
+**Remember:**
+
+- `.cursorrules` is the bridge between Cursor IDE and Developer Progress Report System
+- `docs/BLUEPRINT.md` and `docs/PROGRESS.md` are the single source of truth
+- Both systems must stay in sync for seamless integration
+- Documentation updates are as important as code changes
+
+---
+
+## 📌 QUICK REFERENCE
+
+| Task                         | Action                         | File to Update                   |
+| ---------------------------- | ------------------------------ | -------------------------------- |
+| Start new project            | Initialize dev progress system | Create BLUEPRINT.md, PROGRESS.md |
+| Plan feature                 | Discuss in dev progress system | Update BLUEPRINT.md              |
+| Implement feature            | Follow BLUEPRINT.md            | Update PROGRESS.md after         |
+| Make design decision         | Document reasoning             | Update BLUEPRINT.md              |
+| Complete feature             | Mark as done                   | Update PROGRESS.md               |
+| Pull from GitHub             | Read existing docs             | BLUEPRINT.md, PROGRESS.md        |
+| User says "follow blueprint" | Read and implement             | Follow BLUEPRINT.md              |
+
+---
+
+**This `.cursorrules` file ensures seamless integration between Developer Progress Report System and Cursor IDE. Always follow these rules for consistent, well-documented development.**

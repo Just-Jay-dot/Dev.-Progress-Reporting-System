@@ -1,0 +1,124 @@
+.sidebar {
+  width: 260px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem 0;
+  position: fixed;
+  top: 1.5rem;
+  left: 1.5rem;
+  height: calc(100vh - 3rem);
+  overflow-y: auto;
+  box-shadow: 0 8px 24px var(--shadow);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: 0 1.5rem 2rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sidebar-header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.sidebar-logo {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.sidebar-header h1 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.sidebar-description {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.nav-section {
+  padding: 0 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.nav-section-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  padding: 0 0.75rem;
+  font-weight: 600;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 0.75rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: 12px;
+  margin-bottom: 0.25rem;
+  transition: all 0.2s;
+  font-size: 0.875rem;
+}
+
+.nav-item i {
+  width: 18px;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+.nav-item:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.nav-section-bottom {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.nav-item.active {
+  background: var(--bg-hover);
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-shortcut {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.nav-item:hover .nav-shortcut {
+  opacity: 1;
+}
+

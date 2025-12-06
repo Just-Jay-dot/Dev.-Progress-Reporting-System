@@ -1,0 +1,145 @@
+.chat-message {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: fit-content;
+  padding-bottom: 1.75rem;
+}
+
+.chat-message.user {
+  align-items: flex-end;
+}
+
+.chat-message.ai {
+  align-items: flex-start;
+}
+
+.message-content-text {
+  max-width: 70%;
+  font-size: 0.875rem;
+  line-height: 1.8;
+  word-wrap: break-word;
+  color: var(--text-primary);
+  margin: 0.5rem 1.5rem 0 1.5rem;
+  padding: 0;
+}
+
+.message-content-text p {
+  margin: 0.5rem 0;
+}
+
+.message-content-text p:first-child {
+  margin-top: 0;
+}
+
+.message-content-text p:last-child {
+  margin-bottom: 0;
+}
+
+.message-content-text code {
+  background: var(--bg-tertiary);
+  padding: 0.125rem 0.25rem;
+  border-radius: 3px;
+  font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+  font-size: 0.85em;
+  color: var(--accent);
+}
+
+.message-content-text pre {
+  background: var(--bg-tertiary);
+  padding: 0.75rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 0.5rem 0;
+}
+
+.message-content-text pre code {
+  background: transparent;
+  padding: 0;
+}
+
+.message-content-text ul,
+.message-content-text ol {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.message-content-text li {
+  margin: 0.25rem 0;
+}
+
+.message-content-text strong {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.message-content-text em {
+  font-style: italic;
+}
+
+.message-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  left: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.chat-message.user .message-actions {
+  left: auto;
+  right: 1.5rem;
+}
+
+.chat-message:hover .message-actions {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.message-action-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  font-size: 0.75rem;
+}
+
+.message-action-btn:hover {
+  color: var(--accent);
+  transform: scale(1.15);
+}
+
+.message-action-btn:active {
+  color: var(--accent-hover);
+  transform: scale(1.05);
+}
+
+.message-action-btn.copied {
+  color: var(--success);
+}
+
+.message-action-btn.reading {
+  color: var(--accent);
+  animation: pulse 1.5s infinite;
+}
+
+.message-timestamp {
+  font-size: 0.625rem;
+  color: var(--text-muted);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+

@@ -1,0 +1,155 @@
+.log-container {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px var(--shadow);
+  height: 100%;
+  overflow-y: auto;
+}
+
+.log-entry {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border);
+  transition: all 0.2s;
+}
+
+.log-entry:last-child {
+  border-bottom: none;
+}
+
+.log-entry:hover {
+  background: var(--bg-hover);
+}
+
+.log-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  flex-shrink: 0;
+  font-size: 0.875rem;
+}
+
+.log-icon.feature {
+  background: rgba(88, 166, 255, 0.15);
+  color: var(--accent);
+}
+
+.log-icon.documentation {
+  background: rgba(63, 185, 80, 0.15);
+  color: var(--success);
+}
+
+.log-icon.enhancement {
+  background: rgba(251, 191, 36, 0.15);
+  color: var(--warning);
+}
+
+.log-icon.organization {
+  background: rgba(139, 148, 158, 0.15);
+  color: var(--text-secondary);
+}
+
+.log-content {
+  flex: 1;
+}
+
+.log-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.log-type {
+  font-size: 0.75rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.log-type.feature {
+  background: rgba(88, 166, 255, 0.15);
+  color: var(--accent);
+}
+
+.log-type.documentation {
+  background: rgba(63, 185, 80, 0.15);
+  color: var(--success);
+}
+
+.log-type.enhancement {
+  background: rgba(251, 191, 36, 0.15);
+  color: var(--warning);
+}
+
+.log-type.organization {
+  background: rgba(139, 148, 158, 0.15);
+  color: var(--text-secondary);
+}
+
+.log-action {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.log-timestamp {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+}
+
+.log-details {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+
+.log-loading,
+.log-error,
+.log-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  text-align: center;
+  color: var(--text-secondary);
+  min-height: 200px;
+}
+
+.log-loading i,
+.log-error i,
+.log-empty i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  opacity: 0.6;
+}
+
+.log-loading i {
+  color: var(--accent);
+}
+
+.log-error i {
+  color: var(--error);
+}
+
+.log-empty i {
+  color: var(--text-muted);
+}
+
+.log-loading p,
+.log-error p,
+.log-empty p {
+  font-size: 0.875rem;
+  margin: 0;
+}
+

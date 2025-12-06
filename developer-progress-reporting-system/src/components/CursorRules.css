@@ -1,0 +1,108 @@
+.cursor-rules-section {
+  overflow: hidden !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.cursor-rules-container {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 4px 12px var(--shadow);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.cursor-rules-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 1.5rem 0;
+  padding: 2rem 2rem 0 2rem;
+  flex-shrink: 0;
+}
+
+.cursor-rules-content-wrapper {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0 2rem 2rem 2rem;
+  padding-right: calc(2rem + 0.5rem);
+}
+
+.cursor-rules-content {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  word-wrap: break-word;
+}
+
+.cursor-rules-content.markdown-content {
+  background: var(--bg-primary);
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  margin: 0;
+}
+
+.cursor-rules-content.markdown-content h1,
+.cursor-rules-content.markdown-content h2,
+.cursor-rules-content.markdown-content h3 {
+  color: var(--text-primary);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.cursor-rules-content.markdown-content code {
+  background: var(--bg-tertiary);
+  padding: 0.125rem 0.375rem;
+  border-radius: 4px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.8125rem;
+}
+
+.cursor-rules-content.markdown-content pre {
+  background: var(--bg-tertiary);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+}
+
+.cursor-rules-loading,
+.cursor-rules-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  text-align: center;
+  color: var(--text-secondary);
+  min-height: 200px;
+}
+
+.cursor-rules-loading i,
+.cursor-rules-error i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  opacity: 0.6;
+}
+
+.cursor-rules-loading i {
+  color: var(--accent);
+}
+
+.cursor-rules-error i {
+  color: var(--error);
+}
+
+.cursor-rules-loading p,
+.cursor-rules-error p {
+  font-size: 0.875rem;
+  margin: 0;
+}
+
