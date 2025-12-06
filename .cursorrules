@@ -29,8 +29,8 @@
 
 4. **Begin Development**
    - Use the Developer Progress Report System's AI chat to discuss ideas
-   - Update `docs/BLUEPRINT.md` when planning features
-   - Update `docs/PROGRESS.md` when making progress
+   - Update `developer-progress-reporting-system/BLUEPRINT.md` when planning features
+   - Update `developer-progress-reporting-system/PROGRESS.md` when making progress
 
 **RULE: Never start coding without first reading BLUEPRINT.md and PROGRESS.md**
 
@@ -42,12 +42,12 @@
 
 This `.cursorrules` file is the **BRIDGE** between:
 
-- **Developer Progress Report System** (docs/BLUEPRINT.md, docs/PROGRESS.md)
+- **Developer Progress Report System** (developer-progress-reporting-system/BLUEPRINT.md, developer-progress-reporting-system/PROGRESS.md)
 - **Cursor IDE** (Code assistant, chat, autocomplete)
 
 ### How the Bridge Works:
 
-1. **Cursor IDE reads** → `docs/BLUEPRINT.md` and `docs/PROGRESS.md`
+1. **Cursor IDE reads** → `developer-progress-reporting-system/BLUEPRINT.md` and `developer-progress-reporting-system/PROGRESS.md`
 2. **User makes changes** → Cursor IDE updates markdown files automatically
 3. **Developer Progress Report System** → Displays updated documentation
 4. **AI Chat in Dev Progress System** → Uses same documentation for context
@@ -61,9 +61,9 @@ This `.cursorrules` file is the **BRIDGE** between:
 
 **NEVER create additional documentation files unless explicitly requested by the user.**
 
-The project maintains ONLY these 2 main documentation files in the `docs/` folder:
+The project maintains ONLY these 2 main documentation files in the `developer-progress-reporting-system/` folder:
 
-1. **`docs/BLUEPRINT.md`** - SINGLE SOURCE OF TRUTH for all planning, architecture, design decisions, and technical specifications
+1. **`developer-progress-reporting-system/BLUEPRINT.md`** - SINGLE SOURCE OF TRUTH for all planning, architecture, design decisions, and technical specifications
 
    - All planning goes here
    - All architecture decisions go here
@@ -71,19 +71,19 @@ The project maintains ONLY these 2 main documentation files in the `docs/` folde
    - All design decisions go here
    - Update this file, never create new planning files
 
-2. **`docs/PROGRESS.md`** - SINGLE SOURCE OF TRUTH for all progress updates, completed features, and current status
+2. **`developer-progress-reporting-system/PROGRESS.md`** - SINGLE SOURCE OF TRUTH for all progress updates, completed features, and current status
    - All progress updates go here
    - All completed features go here
    - All milestones go here
    - Update this file, never create new progress files
 
-**Note**: Documentation files are located in `docs/` folder with a web viewer at `docs/index.html` for monitoring progress.
+**Note**: Documentation files are located in `developer-progress-reporting-system/` folder with a web viewer at `developer-progress-reporting-system/index.html` for monitoring progress.
 
 ### Temporary Documentation Files
 
-**Use `temp_docs/` folder for temporary research, investigation, or analysis files:**
+**Use `temp_developer-progress-reporting-system/` folder for temporary research, investigation, or analysis files:**
 
-- Create temporary files in `temp_docs/` when needed for research
+- Create temporary files in `temp_developer-progress-reporting-system/` when needed for research
 - After extracting insights, integrate them into BLUEPRINT.md or PROGRESS.md
 - **DELETE temp files after integration** - do not leave them in the folder
 - Temp docs are for investigation only, not permanent documentation
@@ -103,14 +103,14 @@ The project maintains ONLY these 2 main documentation files in the `docs/` folde
 1. **Adding New Features**
 
    - **IMMEDIATELY** after creating a new file/component:
-     - Update `docs/BLUEPRINT.md` → Add feature specification under appropriate section
-     - Update `docs/PROGRESS.md` → Add feature to "🚧 In Progress" section with status "🟡 In Progress"
+     - Update `developer-progress-reporting-system/BLUEPRINT.md` → Add feature specification under appropriate section
+     - Update `developer-progress-reporting-system/PROGRESS.md` → Add feature to "🚧 In Progress" section with status "🟡 In Progress"
    - **DO THIS BEFORE** moving to the next task
 
 2. **Completing Features**
 
    - **IMMEDIATELY** after feature is working:
-     - Update `docs/PROGRESS.md` → Move feature from "In Progress" to "✅ Completed Features"
+     - Update `developer-progress-reporting-system/PROGRESS.md` → Move feature from "In Progress" to "✅ Completed Features"
      - Update completion percentage in progress summary table
      - Add completion date
    - **DO THIS** as soon as the feature works, not at the end of the day
@@ -118,7 +118,7 @@ The project maintains ONLY these 2 main documentation files in the `docs/` folde
 3. **Making Architecture Decisions**
 
    - **IMMEDIATELY** when making design/architecture choices:
-     - Update `docs/BLUEPRINT.md` → Document decision in "Architecture" or "Technical Design" section
+     - Update `developer-progress-reporting-system/BLUEPRINT.md` → Document decision in "Architecture" or "Technical Design" section
      - Explain reasoning and alternatives considered
      - Update date stamp
    - **DO THIS** right after making the decision
@@ -126,15 +126,15 @@ The project maintains ONLY these 2 main documentation files in the `docs/` folde
 4. **Fixing Bugs**
 
    - **IMMEDIATELY** after fixing:
-     - Update `docs/PROGRESS.md` → Add to "🐛 Bug Fixes" section
+     - Update `developer-progress-reporting-system/PROGRESS.md` → Add to "🐛 Bug Fixes" section
      - Document the issue and solution
      - Add date
    - **DO THIS** right after the fix is verified
 
 5. **Refactoring Code**
    - **IMMEDIATELY** after refactoring:
-     - Update `docs/BLUEPRINT.md` → Document refactoring in "Technical Design" section
-     - Update `docs/PROGRESS.md` → Note refactoring in progress updates
+     - Update `developer-progress-reporting-system/BLUEPRINT.md` → Document refactoring in "Technical Design" section
+     - Update `developer-progress-reporting-system/PROGRESS.md` → Note refactoring in progress updates
      - Explain what changed and why
    - **DO THIS** right after refactoring is complete
 
@@ -143,7 +143,7 @@ The project maintains ONLY these 2 main documentation files in the `docs/` folde
 **For EVERY code change, follow this process:**
 
 1. **Make the code change**
-2. **IMMEDIATELY read** `docs/BLUEPRINT.md` and `docs/PROGRESS.md` (if you haven't already)
+2. **IMMEDIATELY read** `developer-progress-reporting-system/BLUEPRINT.md` and `developer-progress-reporting-system/PROGRESS.md` (if you haven't already)
 3. **Determine** which sections need updating based on the change
 4. **Update** the appropriate markdown files with the new information
 5. **Save** the files
@@ -195,8 +195,8 @@ The project maintains ONLY these 2 main documentation files in the `docs/` folde
 
 1. **Read Current State**
 
-   - Read `docs/BLUEPRINT.md` to understand planned features
-   - Read `docs/PROGRESS.md` to understand current status
+   - Read `developer-progress-reporting-system/BLUEPRINT.md` to understand planned features
+   - Read `developer-progress-reporting-system/PROGRESS.md` to understand current status
    - Understand the project architecture and goals
 
 2. **Follow Instructions**
@@ -222,12 +222,12 @@ The project maintains ONLY these 2 main documentation files in the `docs/` folde
 
 **Cursor AI Should:**
 
-1. **FIRST**: Read `docs/BLUEPRINT.md` completely → Find authentication feature specification
-2. **SECOND**: Read `docs/PROGRESS.md` → Check current status and what's already done
+1. **FIRST**: Read `developer-progress-reporting-system/BLUEPRINT.md` completely → Find authentication feature specification
+2. **SECOND**: Read `developer-progress-reporting-system/PROGRESS.md` → Check current status and what's already done
 3. **THIRD**: Understand the architecture and design decisions from BLUEPRINT.md
 4. **FOURTH**: Implement feature **exactly** as specified in BLUEPRINT.md
-5. **FIFTH**: **IMMEDIATELY** update `docs/PROGRESS.md` → Mark authentication as "🟡 In Progress" while implementing
-6. **SIXTH**: After feature works, **IMMEDIATELY** update `docs/PROGRESS.md` → Move to "✅ Completed Features"
+5. **FIFTH**: **IMMEDIATELY** update `developer-progress-reporting-system/PROGRESS.md` → Mark authentication as "🟡 In Progress" while implementing
+6. **SIXTH**: After feature works, **IMMEDIATELY** update `developer-progress-reporting-system/PROGRESS.md` → Move to "✅ Completed Features"
 7. **SEVENTH**: Update completion percentage in PROGRESS.md
 8. **EIGHTH**: Ensure implementation matches documentation (if not, update BLUEPRINT.md to reflect reality)
 
@@ -250,7 +250,7 @@ The project maintains ONLY these 2 main documentation files in the `docs/` folde
 ```
 project-root/
 ├── .cursorrules          # This file (MUST be in root)
-├── docs/
+├── developer-progress-reporting-system/
 │   ├── BLUEPRINT.md      # Project blueprint (MUST exist)
 │   ├── PROGRESS.md       # Progress tracking (MUST exist)
 │   ├── index.html        # Web viewer
@@ -266,10 +266,10 @@ project-root/
    - If `.cursorrules` exists, read it first
    - Follow the rules defined in it
 
-2. **Check for docs/ folder**
+2. **Check for developer-progress-reporting-system/ folder**
 
-   - If `docs/BLUEPRINT.md` exists, read it
-   - If `docs/PROGRESS.md` exists, read it
+   - If `developer-progress-reporting-system/BLUEPRINT.md` exists, read it
+   - If `developer-progress-reporting-system/PROGRESS.md` exists, read it
    - Understand project state before making changes
 
 3. **Sync Documentation**
@@ -320,8 +320,8 @@ project-root/
 
 2. **Read Documentation**
 
-   - Read `docs/BLUEPRINT.md`
-   - Read `docs/PROGRESS.md`
+   - Read `developer-progress-reporting-system/BLUEPRINT.md`
+   - Read `developer-progress-reporting-system/PROGRESS.md`
    - Understand current state
 
 3. **Continue Development**
@@ -337,15 +337,15 @@ project-root/
 
 **ALWAYS read:**
 
-1. `docs/BLUEPRINT.md` → Understand architecture and plans
-2. `docs/PROGRESS.md` → Understand current status
+1. `developer-progress-reporting-system/BLUEPRINT.md` → Understand architecture and plans
+2. `developer-progress-reporting-system/PROGRESS.md` → Understand current status
 3. `.cursorrules` → Understand project rules
 
 ### Reading Priority:
 
 1. **First**: Read `.cursorrules` (this file)
-2. **Second**: Read `docs/BLUEPRINT.md` (project architecture)
-3. **Third**: Read `docs/PROGRESS.md` (current status)
+2. **Second**: Read `developer-progress-reporting-system/BLUEPRINT.md` (project architecture)
+3. **Third**: Read `developer-progress-reporting-system/PROGRESS.md` (current status)
 4. **Then**: Make changes following the documentation
 
 ---
@@ -354,7 +354,7 @@ project-root/
 
 ### Automatic Update Triggers:
 
-**Update `docs/BLUEPRINT.md` when:**
+**Update `developer-progress-reporting-system/BLUEPRINT.md` when:**
 
 - Adding new features
 - Making architecture decisions
@@ -362,7 +362,7 @@ project-root/
 - Planning new functionality
 - Documenting design patterns
 
-**Update `docs/PROGRESS.md` when:**
+**Update `developer-progress-reporting-system/PROGRESS.md` when:**
 
 - Completing features
 - Making progress on tasks
@@ -405,12 +405,12 @@ project-root/
 
 ### For Every Development Session:
 
-- [ ] Read `docs/BLUEPRINT.md` to understand project
-- [ ] Read `docs/PROGRESS.md` to understand status
+- [ ] Read `developer-progress-reporting-system/BLUEPRINT.md` to understand project
+- [ ] Read `developer-progress-reporting-system/PROGRESS.md` to understand status
 - [ ] Use Developer Progress Report System for planning
 - [ ] Make code changes following BLUEPRINT.md
-- [ ] Update `docs/PROGRESS.md` after completing work
-- [ ] Update `docs/BLUEPRINT.md` if making design decisions
+- [ ] Update `developer-progress-reporting-system/PROGRESS.md` after completing work
+- [ ] Update `developer-progress-reporting-system/BLUEPRINT.md` if making design decisions
 - [ ] Ensure documentation matches code
 - [ ] Commit documentation with code changes
 
@@ -429,7 +429,7 @@ project-root/
 **Remember:**
 
 - `.cursorrules` is the bridge between Cursor IDE and Developer Progress Report System
-- `docs/BLUEPRINT.md` and `docs/PROGRESS.md` are the single source of truth
+- `developer-progress-reporting-system/BLUEPRINT.md` and `developer-progress-reporting-system/PROGRESS.md` are the single source of truth
 - Both systems must stay in sync for seamless integration
 - Documentation updates are as important as code changes
 
