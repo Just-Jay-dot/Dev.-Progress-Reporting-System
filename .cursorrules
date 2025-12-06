@@ -32,7 +32,7 @@
    - Update `developer-progress-reporting-system/BLUEPRINT.md` when planning features
    - Update `developer-progress-reporting-system/PROGRESS.md` when making progress
 
-**RULE: Never start coding without first reading BLUEPRINT.md and PROGRESS.md**
+**RULE: Never start coding without first reading developer-progress-reporting-system/BLUEPRINT.md and developer-progress-reporting-system/PROGRESS.md**
 
 ---
 
@@ -81,7 +81,7 @@ The project maintains ONLY these 2 main documentation files in the `developer-pr
 
 ### Temporary Documentation Files
 
-**Use `temp_developer-progress-reporting-system/` folder for temporary research, investigation, or analysis files:**
+**Use `temp_docs/` folder for temporary research, investigation, or analysis files:**
 
 - Create temporary files in `temp_developer-progress-reporting-system/` when needed for research
 - After extracting insights, integrate them into BLUEPRINT.md or PROGRESS.md
@@ -201,14 +201,14 @@ The project maintains ONLY these 2 main documentation files in the `developer-pr
 
 2. **Follow Instructions**
 
-   - Implement features as specified in BLUEPRINT.md
-   - Follow architecture decisions documented in BLUEPRINT.md
+   - Implement features as specified in developer-progress-reporting-system/BLUEPRINT.md
+   - Follow architecture decisions documented in developer-progress-reporting-system/BLUEPRINT.md
    - Respect technical constraints and design decisions
 
 3. **Update Documentation**
 
-   - After implementing, update PROGRESS.md with completion status
-   - If making design decisions, update BLUEPRINT.md
+   - After implementing, update developer-progress-reporting-system/PROGRESS.md with completion status
+   - If making design decisions, update developer-progress-reporting-system/BLUEPRINT.md
    - Keep documentation in sync with code
 
 4. **Maintain Consistency**
@@ -407,7 +407,7 @@ project-root/
 - [ ] Read `developer-progress-reporting-system/BLUEPRINT.md` to understand project
 - [ ] Read `developer-progress-reporting-system/PROGRESS.md` to understand status
 - [ ] Use Developer Progress Report System for planning
-- [ ] Make code changes following BLUEPRINT.md
+- [ ] Make code changes following developer-progress-reporting-system/BLUEPRINT.md
 - [ ] Update `developer-progress-reporting-system/PROGRESS.md` after completing work
 - [ ] Update `developer-progress-reporting-system/BLUEPRINT.md` if making design decisions
 - [ ] Ensure documentation matches code
