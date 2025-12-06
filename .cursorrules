@@ -294,10 +294,9 @@ project-root/
 2. **Initialize Developer Progress Report System**
 
    ```bash
-   mkdir docs
-   # Create BLUEPRINT.md with initial structure
-   # Create PROGRESS.md with initial structure
-   # Copy dev progress report system files
+   # Clone the Developer Progress Reporting System repository
+   git clone https://github.com/Just-Jay-dot/Dev.-Progress-Reporting-System.git
+   # The developer-progress-reporting-system/ folder will be in the cloned repository
    ```
 
 3. **Add .cursorrules**
@@ -439,13 +438,13 @@ project-root/
 
 | Task                         | Action                         | File to Update                   |
 | ---------------------------- | ------------------------------ | -------------------------------- |
-| Start new project            | Initialize dev progress system | Create BLUEPRINT.md, PROGRESS.md |
-| Plan feature                 | Discuss in dev progress system | Update BLUEPRINT.md              |
-| Implement feature            | Follow BLUEPRINT.md            | Update PROGRESS.md after         |
-| Make design decision         | Document reasoning             | Update BLUEPRINT.md              |
-| Complete feature             | Mark as done                   | Update PROGRESS.md               |
-| Pull from GitHub             | Read existing docs             | BLUEPRINT.md, PROGRESS.md        |
-| User says "follow blueprint" | Read and implement             | Follow BLUEPRINT.md              |
+| Start new project            | Initialize dev progress system | Create developer-progress-reporting-system/BLUEPRINT.md, developer-progress-reporting-system/PROGRESS.md |
+| Plan feature                 | Discuss in dev progress system | Update developer-progress-reporting-system/BLUEPRINT.md              |
+| Implement feature            | Follow BLUEPRINT.md            | Update developer-progress-reporting-system/PROGRESS.md after         |
+| Make design decision         | Document reasoning             | Update developer-progress-reporting-system/BLUEPRINT.md              |
+| Complete feature             | Mark as done                   | Update developer-progress-reporting-system/PROGRESS.md               |
+| Pull from GitHub             | Read existing docs             | developer-progress-reporting-system/BLUEPRINT.md, developer-progress-reporting-system/PROGRESS.md        |
+| User says "follow blueprint" | Read and implement             | Follow developer-progress-reporting-system/BLUEPRINT.md              |
 
 ---
 
